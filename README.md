@@ -54,4 +54,7 @@ accuracy(predicao, iris$Sepal.Length)
 ![image](https://github.com/user-attachments/assets/896a7935-1350-4126-a82d-6f8b4d7e7368)
 
 
+## Árvores de decisão para classificação
+
+
 
