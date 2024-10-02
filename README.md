@@ -75,3 +75,25 @@ creditotreino = credito[amostra == 1, ]
 creditoteste = credito[amostra == 2, ]
 ```
 
+Criando método para classificação
+
+```r
+arvore = rpart(class ~ ., data = creditotreino, method = "class")
+print(arvore)
+```
+
+Demonstrando a estrutura da árvore criada:
+
+![image](https://github.com/user-attachments/assets/8eccc71f-81a1-42cb-bf74-4eb10646adac)
+
+Realizando previsão:
+
+```r
+teste = predict(arvore, newdata = creditoteste)
+head(teste)
+```
+
+Resultado:
+
+![image](https://github.com/user-attachments/assets/4d0fbea9-9f49-41ef-b146-2d7e44801b1f)
+
