@@ -71,13 +71,13 @@ amostra = sample(2, 1000, replace = TRUE, prob = c(0.7, 0.3))
 Criando o conjunto para teste e conjunto de treino, utilizando a amostra:
 
 ```r
-1 - creditotreino = credito[amostra == 1, ]
-2 - creditoteste = credito[amostra == 2, ]
+creditotreino = credito[amostra == 1, ] #1
+creditoteste = credito[amostra == 2, ]  #2
 
-#1 - cria uma variável que carrega todas as linhas em que o valor "credito é igual a 1", com base na amostra
+#1 - Cria uma variável que carrega todas as linhas em que o valor "credito é igual a 1", com base na amostra
 criada aleatoriamente com a proporção declarada na função
 
-#2 - cria uma variável que carrega todas as linhas em que o valor "credito é igual a 2", com base na amostra
+#2 - Cria uma variável que carrega todas as linhas em que o valor "credito é igual a 2", com base na amostra
 criada aleatoriamente com a proporção declarada na função
 ```
 
@@ -86,6 +86,8 @@ Criando método para classificação
 ```r
 arvore = rpart(class ~ ., data = creditotreino, method = "class")
 print(arvore)
+
+# Esse método cria uma arvore de previsão da coluna class "class", utilizando a correlação de todas as outras colunas
 ```
 
 Demonstrando a estrutura da árvore criada:
