@@ -62,7 +62,7 @@ Importando conjunto de dados externos
 credito = read.csv("Credit.csv")
 ```
 
-Criando amostra
+Criando a amostra, com proporções de 70% e 30%, gerados aleatoriamente:
 
 ```r
 amostra = sample(2, 1000, replace = TRUE, prob = c(0.7, 0.3))
@@ -71,8 +71,14 @@ amostra = sample(2, 1000, replace = TRUE, prob = c(0.7, 0.3))
 Criando o conjunto para teste e conjunto de treino, utilizando a amostra:
 
 ```r
-creditotreino = credito[amostra == 1, ]
-creditoteste = credito[amostra == 2, ]
+1 - creditotreino = credito[amostra == 1, ]
+2 - creditoteste = credito[amostra == 2, ]
+
+#1 - cria uma variável que carrega todas as linhas em que o valor "credito é igual a 1", com base na amostra
+criada aleatoriamente com a proporção declarada na função
+
+#2 - cria uma variável que carrega todas as linhas em que o valor "credito é igual a 2", com base na amostra
+criada aleatoriamente com a proporção declarada na função
 ```
 
 Criando método para classificação
