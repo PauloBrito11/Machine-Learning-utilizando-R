@@ -56,5 +56,22 @@ accuracy(predicao, iris$Sepal.Length)
 
 ## Árvores de decisão para classificação
 
+Importando conjunto de dados externos
 
+```r
+credito = read.csv("Credit.csv")
+```
+
+Criando amostra
+
+```r
+amostra = sample(2, 1000, replace = TRUE, prob = c(0.7, 0.3))
+```
+
+Criando o conjunto para teste e conjunto de treino, utilizando a amostra:
+
+```r
+creditotreino = credito[amostra == 1, ]
+creditoteste = credito[amostra == 2, ]
+```
 
