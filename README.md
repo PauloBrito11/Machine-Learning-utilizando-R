@@ -75,10 +75,10 @@ creditotreino = credito[amostra == 1, ] #1
 creditoteste = credito[amostra == 2, ]  #2
 
 #1 - Cria uma variável que carrega todas as linhas em que o valor "credito é igual a 1", com base na amostra
-criada aleatoriamente com a proporção declarada na função
+# criada aleatoriamente com a proporção declarada na função
 
 #2 - Cria uma variável que carrega todas as linhas em que o valor "credito é igual a 2", com base na amostra
-criada aleatoriamente com a proporção declarada na função
+# criada aleatoriamente com a proporção declarada na função
 ```
 
 Criando método para classificação
@@ -120,6 +120,7 @@ Criando coluna no conjunto de dados de teste para verificar os resultados:
 creditoteste['Result'] = ifelse(creditoteste$bad > 0.5, "bad", "good")
 creditoteste
 
-# Basicamente, se o valor da coluna "bad" for maior que 0.5, ele será um mal pagador, caso seja menor, ele será um bom pagador
+# Basicamente, se o valor da coluna "bad" for maior que 0.5, ele será um mal
+# pagador, caso seja menor, ele será um bom pagador
 ```
 
