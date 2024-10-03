@@ -103,7 +103,23 @@ head(teste)
 # Nesse caso, o conjunto de dados possuíra as probabilidades do cliente ser um bom pagador ou não: "good" ou "bad"
 ```
 
+Adicionando a coluna de teste (previsão), no conjunto de dados:
+
+```r
+creditoteste = cbind(creditoteste, teste)
+head(creditoteste)
+```
+
 Resultando contendo a probabilidade do cliente ser ou não um bom pagador, repare que a soma delas sempre será um, visto que é uma probabilidade:
 
 ![image](https://github.com/user-attachments/assets/4d0fbea9-9f49-41ef-b146-2d7e44801b1f)
+
+Criando coluna no conjunto de dados de teste para verificar os resultados:
+
+```r
+creditoteste['Result'] = ifelse(creditoteste$bad > 0.5, "bad", "good")
+creditoteste
+
+# Basicamente, se o valor da coluna "bad" for maior que 0.5, ele será um mal pagador, caso seja menor, ele será um bom pagador
+```
 
