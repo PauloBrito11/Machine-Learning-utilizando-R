@@ -124,3 +124,14 @@ creditoteste
 # pagador, caso seja menor, ele será um bom pagador
 ```
 
+Criando matriz de confusão:
+
+```r
+confusao = table(cred$class, cred$Result)
+taxaacerto = (confusao[1] + confusao[4]) / sum(confusao)
+taxaacerto
+```
+
+Obtivemos um bom resultado, considerando que é um texto de um modelo sem polimento algum:
+
+![image](https://github.com/user-attachments/assets/e818a245-df15-4c61-9a4f-7ec3dd8a911e)
