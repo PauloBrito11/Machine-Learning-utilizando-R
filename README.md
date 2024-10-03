@@ -1,9 +1,9 @@
-# Machine-Learning-utilizando-R
+# Machine Learning utilizando-R
 Técnicas de Machine Learning utilizando R
 
 ## Árvores de regressão para decisão
 
-Conjunto de dados utilizado: biblioteca padrão da linguagem R, conjunto "iris".
+- Conjunto de dados utilizado: biblioteca padrão da linguagem R, conjunto "iris".
 
 Criando o modelo utilizando a função rpart (biblioteca "rpart")
 
@@ -56,6 +56,8 @@ accuracy(predicao, iris$Sepal.Length)
 
 ## Árvores de decisão para classificação
 
+- Conjunto de dados utilizado: conjunto externo simulando crédito
+  
 Importando conjunto de dados externos
 
 ```r
@@ -135,3 +137,5 @@ taxaacerto
 Obtivemos um bom resultado, considerando que é um texto de um modelo sem polimento algum:
 
 ![image](https://github.com/user-attachments/assets/e818a245-df15-4c61-9a4f-7ec3dd8a911e)
+
+## Algoritmo Naive Bayes
