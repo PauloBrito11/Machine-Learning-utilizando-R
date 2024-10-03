@@ -12,11 +12,11 @@ modelo = rpart(Sepal.Length ~ Sepal.Width + Petal.Length + Petal.Width + Species
 summary(modelo)
 ```
 
-Estrutura sem texto (não consegui achar uma forma da fonte não ser cortada ):
+Estrutura sem texto:
 
 ![image](https://github.com/user-attachments/assets/5f4e0ced-e047-4a74-911f-ad7714cdfa56)
 
-Estrutura "nomeada":
+Estrutura "nomeada" (não consegui achar uma forma dela sair numa formatação mais legível):
 
 ![image](https://github.com/user-attachments/assets/20aa964f-199e-4c7e-8554-bd2ccdefe1b4)
 
