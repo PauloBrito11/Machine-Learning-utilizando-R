@@ -168,3 +168,27 @@ Realizando previsão:
 ```r
 predicao <- predict(modelo, creditoteste)
 ```
+
+Criando matriz de confusão:
+
+```r
+confusao = table(creditoteste$class,predicao)
+```
+
+Resultado: 
+
+![image](https://github.com/user-attachments/assets/cfaed1ba-afb7-4406-a492-618ea1cfdf96)
+
+Taxa de acerto:
+
+```r
+taxaacerto = (confusao[1] + confusao[4]) / sum(confusao)
+
+taxaerro = (confusao[2] + confusao[3]) / sum(confusao)
+
+taxaacerto
+```
+
+Resultado: 
+
+![image](https://github.com/user-attachments/assets/f4eb602a-ad00-4b75-88be-5e7a8f64d1dd)
