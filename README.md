@@ -139,3 +139,32 @@ Obtivemos um bom resultado, considerando que é um texto de um modelo sem polime
 ![image](https://github.com/user-attachments/assets/e818a245-df15-4c61-9a4f-7ec3dd8a911e)
 
 ## Algoritmo Naive Bayes
+
+- Conjunto de dados utilizado: externo
+- Biblioteca utilizada: e1071
+
+Transformando a classe em fator:
+
+```r
+credito$class = as.factor(credito$class)
+```
+
+Criando dados de treino e dados de teste:
+
+```r
+amostra = sample(2, 1000, replace = TRUE, prob = c(0.7, 0.3))
+creditotreino = credito[amostra == 1, ]
+creditoteste = credito[amostra == 2, ]
+```
+
+Criando o modelo
+
+```r
+modelo <- naiveBayes(class ~ ., creditotreino)
+```
+
+Realizando previsão:
+
+```r
+predicao <- predict(modelo, creditoteste)
+```
